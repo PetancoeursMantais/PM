@@ -11,8 +11,6 @@ body {
     min-height: 100vh;
 }
 
-/* ===== Fond d'écran avec vraie teinte bleue ===== */
-
 body::before {
     content: "";
     position: fixed;
@@ -28,7 +26,6 @@ body::before {
     background-repeat: no-repeat;
     z-index: -1;
 }
-
 
 /* ============================= */
 /*            HEADER             */
@@ -62,8 +59,6 @@ header h1 {
     letter-spacing: 1px;
 }
 
-/* ===== Navigation moderne ===== */
-
 header nav {
     margin-top: 15px;
     display: flex;
@@ -95,7 +90,6 @@ header nav a:hover::after {
     width: 100%;
 }
 
-
 /* ============================= */
 /*          SECTIONS             */
 /* ============================= */
@@ -109,7 +103,6 @@ section, footer {
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
-
 /* ============================= */
 /*         TITRES & TEXTE        */
 /* ============================= */
@@ -121,7 +114,6 @@ h1, h2, h3 {
 p {
     line-height: 1.6;
 }
-
 
 /* ============================= */
 /*           BOUTONS             */
@@ -144,7 +136,6 @@ a.btn:hover {
     box-shadow: 0 6px 18px rgba(0,0,0,0.3);
 }
 
-
 /* ============================= */
 /*           TABLEAUX            */
 /* ============================= */
@@ -166,7 +157,6 @@ table th {
     color: white;
 }
 
-
 /* ============================= */
 /*            LISTES             */
 /* ============================= */
@@ -179,33 +169,6 @@ ul {
 ul li {
     margin-bottom: 8px;
 }
-
-
-/* ============================= */
-/*            IMAGES             */
-/* ============================= */
-
-.hero-image, .gallery img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-
-/* ============================= */
-/*            GALERIE            */
-/* ============================= */
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.gallery img {
-    flex: 1 1 calc(33% - 15px);
-}
-
 
 /* ============================= */
 /*            CONTACT            */
@@ -240,7 +203,6 @@ ul li {
     transform: translateY(-2px);
 }
 
-
 /* ============================= */
 /*            FOOTER             */
 /* ============================= */
@@ -271,33 +233,21 @@ footer {
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
+    height: 250px; /* hauteur uniforme pour toutes les images */
+    /* Pour carrés parfaits, remplacer par : aspect-ratio: 1 / 1; */
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* recadrage propre */
     transition: transform 0.4s ease;
 }
 
-/* Effet zoom moderne */
 .gallery-item:hover img {
     transform: scale(1.08);
 }
 
 .gallery-item:hover {
     transform: translateY(-5px);
-}
-
-.galerie {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-.galerie img {
-    width: 100%;
-    height: 250px;        /* hauteur fixe */
-    object-fit: cover;    /* recadre proprement */
-    border-radius: 10px;
 }
