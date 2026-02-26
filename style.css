@@ -288,3 +288,16 @@ footer {
 .gallery-item:hover {
     transform: translateY(-5px);
 }
+
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.galerie img {
+    width: 100%;
+    height: 250px;        /* hauteur fixe */
+    object-fit: cover;    /* recadre proprement */
+    border-radius: 10px;
+}
