@@ -1,5 +1,7 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +12,13 @@
 <body>
 
 <header>
+
 <img src="images/logopm.png" alt="Logo Pétancoeurs Mantais" class="logo">
 <h1>Pétancoeurs Mantais - Sports & Santé</h1>
 
-<nav>
+<div class="menu-toggle">☰</div>
+
+<nav id="menu">
 <a href="index.html">Accueil</a>
 <a href="club.html">Le Club</a>
 <a href="ecole.html">École de pétanque</a>
@@ -22,64 +27,91 @@
 <a href="galerie.html">Galerie</a>
 <a href="contact.html">Contact</a>
 </nav>
+
 </header>
 
 <main>
 
 <section class="gallery-section">
+
 <h2>Galerie photos</h2>
 
 <div class="gallery-grid">
 
 <div class="gallery-item">
+<a href="images/p1.jpg">
 <img src="images/p1.jpg" alt="Tournoi de pétanque">
+</a>
 </div>
 
 <div class="gallery-item">
+<a href="images/p2.jpg">
 <img src="images/p2.jpg" alt="Entraînement au boulodrome">
+</a>
 </div>
 
 <div class="gallery-item">
+<a href="images/p3.jpg">
 <img src="images/p3.jpg" alt="Équipe du club">
+</a>
 </div>
 
 <div class="gallery-item">
+<a href="images/p4.jpg">
 <img src="images/p4.jpg" alt="Compétition officielle">
+</a>
 </div>
 
 <div class="gallery-item">
+<a href="images/p5.jpg">
 <img src="images/p5.jpg" alt="Moment convivial du club">
+</a>
 </div>
 
 <div class="gallery-item">
+<a href="images/p6.jpg">
 <img src="images/p6.jpg" alt="Remise de récompenses">
+</a>
 </div>
 
 <div class="gallery-item">
+<a href="images/p7.jpg">
 <img src="images/p7.jpg" alt="Événement club">
+</a>
 </div>
 
 <div class="gallery-item">
+<a href="images/p8.jpg">
 <img src="images/p8.jpg" alt="Compétition interne">
+</a>
 </div>
 
 <div class="gallery-item">
+<a href="images/p9.jpg">
 <img src="images/p9.jpg" alt="Entraînement équipe">
+</a>
 </div>
 
 <div class="gallery-item">
+<a href="images/p10.jpg">
 <img src="images/p10.jpg" alt="Tournoi amical">
+</a>
 </div>
 
 <div class="gallery-item">
+<a href="images/p11.jpg">
 <img src="images/p11.jpg" alt="Remise de prix">
+</a>
 </div>
 
 <div class="gallery-item">
+<a href="images/p12.jpg">
 <img src="images/p12.jpg" alt="Moment convivial">
+</a>
 </div>
 
 </div>
+
 </section>
 
 </main>
@@ -90,33 +122,47 @@
 
 <script>
 
-const images = document.querySelectorAll(".gallery-item img");
+/* MENU MOBILE */
 
-images.forEach(img => {
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector("#menu");
 
-img.addEventListener("click", function() {
+toggle.addEventListener("click", () => {
+menu.classList.toggle("active");
+});
+
+
+/* ZOOM IMAGE GALERIE */
+
+document.querySelectorAll('.gallery-item a').forEach(link => {
+
+link.addEventListener('click', function(e) {
+
+e.preventDefault();
+
+const src = this.href;
 
 const overlay = document.createElement("div");
 
 overlay.style.position = "fixed";
-overlay.style.top = "0";
-overlay.style.left = "0";
+overlay.style.top = 0;
+overlay.style.left = 0;
 overlay.style.width = "100%";
 overlay.style.height = "100%";
 overlay.style.background = "rgba(0,0,0,0.9)";
 overlay.style.display = "flex";
 overlay.style.alignItems = "center";
 overlay.style.justifyContent = "center";
-overlay.style.zIndex = "9999";
+overlay.style.zIndex = 9999;
 
-const bigImg = document.createElement("img");
+const img = document.createElement("img");
 
-bigImg.src = this.src;
-bigImg.style.maxWidth = "90%";
-bigImg.style.maxHeight = "90%";
-bigImg.style.borderRadius = "10px";
+img.src = src;
+img.style.maxWidth = "90%";
+img.style.maxHeight = "90%";
+img.style.borderRadius = "10px";
 
-overlay.appendChild(bigImg);
+overlay.appendChild(img);
 
 overlay.addEventListener("click", () => {
 overlay.remove();
