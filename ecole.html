@@ -32,79 +32,140 @@
 
 <main>
 
-    <!-- PRESENTATION -->
-    <section class="presentation">
-        <h2>Une école pour former les champions de demain</h2>
-        <p>
-            <strong>Les P’tits Bouchons Mantais</strong> accueillent les jeunes dès 6 ans
-            au sein du club Pétancoeurs Mantais.
-            Notre objectif est d’enseigner les bases techniques (point, tir, règles du jeu),
-            tout en développant l’esprit d’équipe, le respect et la discipline.
-        </p>
-    </section>
+<section class="presentation">
+<h2>Une école pour former les champions de demain</h2>
+<p>
+<strong>Les P’tits Bouchons Mantais</strong> accueillent les jeunes dès 6 ans
+au sein du club Pétancoeurs Mantais.
+Notre objectif est d’enseigner les bases techniques (point, tir, règles du jeu),
+tout en développant l’esprit d’équipe, le respect et la discipline.
+</p>
+</section>
 
-    <!-- CATEGORIES -->
-    <section class="evenements">
-        <h2>Catégories d’âge</h2>
-        <ul>
-            <li>Benjamins : 6 – 8 ans</li>
-            <li>Minimes : 9 – 11 ans</li>
-            <li>Cadets : 12 – 14 ans</li>
-            <li>Juniors : 15 – 17 ans</li>
-        </ul>
-    </section>
+<section class="evenements">
+<h2>Catégories d’âge</h2>
+<ul>
+<li>Benjamins : 6 – 8 ans</li>
+<li>Minimes : 9 – 11 ans</li>
+<li>Cadets : 12 – 14 ans</li>
+<li>Juniors : 15 – 17 ans</li>
+</ul>
+</section>
 
-    <!-- HORAIRES -->
-    <section class="evenements">
-        <h2>Horaires des entraînements</h2>
-        <p>
-            📍 Lieu : Boulodrome du club<br>
-            🕒 Mercredi : 15h00 – 16h30<br>
-        </p>
-    </section>
+<section class="evenements">
+<h2>Horaires des entraînements</h2>
+<p>
+📍 Lieu : Boulodrome du club<br>
+🕒 Mercredi : 15h00 – 16h30
+</p>
+</section>
 
-    <!-- ENCADREMENT -->
-    <section class="presentation">
-        <h2>Encadrement</h2>
-        <p>
-            Les séances sont encadrées par des éducateurs licenciés auprès de la
-            Fédération Française de Pétanque et de Jeu Provençal.
-            Les jeunes peuvent participer aux compétitions officielles départementales et régionales.
-        </p>
+<section class="presentation">
+<h2>Encadrement</h2>
+<p>
+Les séances sont encadrées par des éducateurs licenciés auprès de la
+Fédération Française de Pétanque et de Jeu Provençal.
+Les jeunes peuvent participer aux compétitions officielles départementales et régionales.
+</p>
 
-        <p>
-            Club officiellement affilié à la Fédération Française de Pétanque et de Jeu Provençal (FFPJP),
-            garantissant un encadrement reconnu et conforme aux normes fédérales.
-        </p>
-    </section>
+<p>
+Club officiellement affilié à la Fédération Française de Pétanque et de Jeu Provençal (FFPJP),
+garantissant un encadrement reconnu et conforme aux normes fédérales.
+</p>
+</section>
 
-    <!-- GALERIE -->
-    <section class="gallery-preview">
-        <h2>Aperçu de nos activités</h2>
+<section class="gallery-preview">
+<h2>Les P’tits Bouchons en action</h2>
 
-        <div class="gallery">
-            <img src="images/p13.jpg" alt="Tournoi de pétanque du club">
-            <img src="images/p16.jpg" alt="Entraînement au boulodrome">
-            <img src="images/p18.jpg" alt="Équipe du club Pétancoeurs Mantais">
-            <img src="images/p20.jpg" alt="Équipe du club Pétancoeurs Mantais">
-        </div>
-    </section>
+<div class="gallery-grid">
 
-    <!-- CTA -->
-    <section class="cta">
-        <h2>Inscrire votre enfant</h2>
-        <p>
-            Vous souhaitez inscrire votre enfant aux P’tits Bouchons Mantais ?
-            Contactez-nous pour obtenir le dossier d’inscription.
-        </p>
-        <a href="contact.html" class="btn">Nous contacter</a>
-    </section>
+<div class="gallery-item">
+<a href="images/p13.jpg">
+<img src="images/p13.jpg" alt="Entraînement des jeunes">
+</a>
+</div>
+
+<div class="gallery-item">
+<a href="images/p16.jpg">
+<img src="images/p16.jpg" alt="Séance pétanque enfants">
+</a>
+</div>
+
+<div class="gallery-item">
+<a href="images/p18.jpg">
+<img src="images/p18.jpg" alt="Jeunes joueurs du club">
+</a>
+</div>
+
+<div class="gallery-item">
+<a href="images/p20.jpg">
+<img src="images/p20.jpg" alt="Activités école pétanque">
+</a>
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+<h2>Inscrire votre enfant</h2>
+<p>
+Vous souhaitez inscrire votre enfant aux P’tits Bouchons Mantais ?
+Contactez-nous pour obtenir le dossier d’inscription.
+</p>
+<a href="contact.html" class="btn">Nous contacter</a>
+</section>
 
 </main>
 
 <footer>
-    <p>© 2026 Pétancoeurs Mantais - Sport & Santé</p>
+<p>© 2026 Pétancoeurs Mantais - Sport & Santé</p>
 </footer>
+
+<script>
+
+document.querySelectorAll('.gallery-item a').forEach(link => {
+
+link.addEventListener('click', function(e) {
+
+e.preventDefault();
+
+const src = this.href;
+
+const overlay = document.createElement("div");
+
+overlay.style.position = "fixed";
+overlay.style.top = 0;
+overlay.style.left = 0;
+overlay.style.width = "100%";
+overlay.style.height = "100%";
+overlay.style.background = "rgba(0,0,0,0.9)";
+overlay.style.display = "flex";
+overlay.style.alignItems = "center";
+overlay.style.justifyContent = "center";
+overlay.style.zIndex = 9999;
+
+const img = document.createElement("img");
+
+img.src = src;
+img.style.maxWidth = "90%";
+img.style.maxHeight = "90%";
+img.style.borderRadius = "10px";
+
+overlay.appendChild(img);
+
+overlay.addEventListener("click", () => {
+
+overlay.remove();
+
+});
+
+document.body.appendChild(overlay);
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
