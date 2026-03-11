@@ -1,72 +1,103 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Pétancoeurs Mantais - Résultats</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pétancoeurs Mantais - Résultats</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-    <header>
+<header>
 
-        <img src="images/logopm.png" alt="Logo Pétancoeurs Mantais" class="logo">
-        
-        <h1>Pétancoeurs Mantais - Sports & Santé</h1>
-        
-        <div class="menu-toggle">☰</div>
-        
-        <nav id="menu">
-        
-        <a href="index.html">Accueil</a>
-        <a href="club.html">Le Club</a>
-        <a href="ecole.html">École de pétanque</a>
-        <a href="calendrier.html">Calendrier</a>
-        <a href="resultats.html">Résultats</a>
-        <a href="galerie.html">Galerie</a>
-        <a href="contact.html">Contact</a>
-        
-        </nav>
-        
-    </header>
+<img src="images/logopm.png" alt="Logo Pétancoeurs Mantais" class="logo">
+
+<h1>Pétancoeurs Mantais - Sports & Santé</h1>
+
+<div class="menu-toggle">☰</div>
+
+<nav id="menu">
+
+<a href="index.html">Accueil</a>
+<a href="club.html">Le Club</a>
+<a href="ecole.html">École de pétanque</a>
+<a href="calendrier.html">Calendrier</a>
+<a href="resultats.html">Résultats</a>
+<a href="galerie.html">Galerie</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
 
 <section class="results">
-    <h2>Résultats des tournois</h2>
-    <p>Voici les derniers résultats du club :</p>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Événement</th>
-                <th>Vainqueur</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            </tr>
-            <tr>
-            </tr>
-            <tr>
-            </tr>
-        </tbody>
-    </table>
+<h2>Résultats du club</h2>
+
+<p>Retrouvez les derniers résultats des joueurs des Pétancoeurs Mantais.</p>
+
+<div class="results-grid">
+
+<div class="result-card">
+
+<h3>Championnat Doublette Senior</h3>
+
+<p class="winner">🏆1/4 Pascal Leducq / Olivier Corrèze</p>
+
+
+</div>
+
+<div class="result-card">
+
+<h3>CDC Vétérans</h3>
+
+<p class="date">15 Mai 2026</p>
+
+<p class="winner">🏆 Équipe Pétancoeurs Mantais</p>
+
+<p class="place">Limay</p>
+
+</div>
+
+<div class="result-card">
+
+    <h3>CDC Séniors</h3>
+    
+    <p class="date">15 Mai 2026</p>
+    
+    <p class="winner">🏆 Équipe Pétancoeurs Mantais</p>
+    
+    <p class="place">Gargenville</p>
+    
+    </div>
+
 </section>
 
 <footer>
-    <p>© 2026 Pétancoeurs Mantais - Sports et Santé</p>
+
+<p>© 2026 Pétancoeurs Mantais - Sports et Santé</p>
+
 </footer>
+
 <script>
 
-    const toggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector("#menu");
-    
-    toggle.addEventListener("click", () => {
-    
-    menu.classList.toggle("active");
-    
-    });
-    
-    </script>
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector("#menu");
+
+toggle.addEventListener("click", () => {
+
+menu.classList.toggle("active");
+
+});
+
+</script>
 
 </body>
 </html>
+```
