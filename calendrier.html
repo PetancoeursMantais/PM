@@ -1,16 +1,25 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Pétancoeurs Mantais - Calendrier</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pétancoeurs Mantais - Calendrier</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
+    <header>
+
         <img src="images/logopm.png" alt="Logo Pétancoeurs Mantais" class="logo">
-    <h1>Pétancoeurs Mantais - Sports & Santé</h1>
-    <nav>
+        
+        <h1>Pétancoeurs Mantais - Sports & Santé</h1>
+        
+        <div class="menu-toggle">☰</div>
+        
+        <nav id="menu">
+        
         <a href="index.html">Accueil</a>
         <a href="club.html">Le Club</a>
         <a href="ecole.html">École de pétanque</a>
@@ -18,59 +27,92 @@
         <a href="resultats.html">Résultats</a>
         <a href="galerie.html">Galerie</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+        
+        </nav>
+        
+    </header>
 
 <section class="calendar">
-    <h2>Calendrier des événements</h2>
-    <p>Voici les prochains rendez-vous du club :</p>
 
-    <table>
-        <thead>
-            <tr>
-                <td>07/06/2026</td>
-                <td>Doublette TC 14H00</td>
-                <td>Terrain 1 : L'île aux Dames</td>
-            </tr>
-            <tr>
-                <td>20/06/2026</td>
-                <td>Doublette Promotion 14H00</td>
-                <td>Terrain 1 : L'île aux Dames</td>
-            </tr>
-            <tr>
-                <td>28/06/2026</td>
-                <td>Championnat Des Clubs 8H00</td>
-                <td>Terrain 1 : L'île l'Aumône </td>
-            </tr>
-            <tr>
-                <td>29/08/2026</td>
-                <td>Challenge des commercants 10H00</td>
-                <td>Terrain 1 : L'île aux Dames </td>
-            </tr>
-            <tr>
-                 <td>18/10/2026</td>
-                <td>Triplette MIXTE 10H00</td>
-                <td>Terrain 2 : Boulodrome du stade Jean-Paul DAVID </td>
-             </tr>
-            <tr>
-                 <td>29/11/2026</td>
-                <td> Doublette MIXTE 10H00</td>
-                <td>Terrain 2 : Boulodrome du stade Jean-Paul DAVID </td>
+<h2>Calendrier des événements</h2>
 
-             </tr>
-            <tr>
-                 <td>08/12/2026</td>
-                <td> Doublette MIXTE 10H00</td>
-                <td>Terrain 2 : Boulodrome du stade Jean-Paul DAVID </td>
-    
-            </tr>
-        </tbody>
-    </table>
+<p>Voici les prochains rendez-vous du club :</p>
+
+<table>
+
+<thead>
+<tr>
+<th>Date</th>
+<th>Événement</th>
+<th>Lieu</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>07/06/2026</td>
+<td>Doublette TC - 14H00</td>
+<td>Terrain 1 : L'île aux Dames</td>
+</tr>
+
+<tr>
+<td>20/06/2026</td>
+<td>Doublette Promotion - 14H00</td>
+<td>Terrain 1 : L'île aux Dames</td>
+</tr>
+
+<tr>
+<td>28/06/2026</td>
+<td>Championnat des Clubs - 8H00</td>
+<td>Terrain 1 : L'île l'Aumône</td>
+</tr>
+
+<tr>
+<td>29/08/2026</td>
+<td>Challenge des commerçants - 10H00</td>
+<td>Terrain 1 : L'île aux Dames</td>
+</tr>
+
+<tr>
+<td>18/10/2026</td>
+<td>Triplette Mixte - 10H00</td>
+<td>Terrain 2 : Boulodrome du stade Jean-Paul David</td>
+</tr>
+
+<tr>
+<td>29/11/2026</td>
+<td>Doublette Mixte - 10H00</td>
+<td>Terrain 2 : Boulodrome du stade Jean-Paul David</td>
+</tr>
+
+<tr>
+<td>08/12/2026</td>
+<td>Doublette Mixte - 10H00</td>
+<td>Terrain 2 : Boulodrome du stade Jean-Paul David</td>
+</tr>
+
+</tbody>
+
+</table>
+
 </section>
 
 <footer>
-    <p>© 2026 Pétancoeurs Mantais - Sports et Santé</p>
+<p>© 2026 Pétancoeurs Mantais - Sports et Santé</p>
 </footer>
+<script>
+
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("#menu");
+    
+    toggle.addEventListener("click", () => {
+    
+    menu.classList.toggle("active");
+    
+    });
+    
+    </script>
 
 </body>
 </html>

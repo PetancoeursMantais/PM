@@ -13,22 +13,27 @@
 
 <body>
 
-<header>
-    <div class="header-content">
-        <img src="images/logopm.png" alt="Logo du club Pétancoeurs Mantais" class="logo">
-        <h1>Les P’tits Bouchons Mantais</h1>
+    <header>
 
-        <nav aria-label="Navigation principale">
-            <a href="index.html">Accueil</a>
-            <a href="club.html">Le Club</a>
-            <a href="ecole.html">École de pétanque</a>
-            <a href="calendrier.html">Calendrier</a>
-            <a href="resultats.html">Résultats</a>
-            <a href="galerie.html">Galerie</a>
-            <a href="contact.html">Contact</a>
+        <img src="images/logopm.png" alt="Logo Pétancoeurs Mantais" class="logo">
+        
+        <h1>Pétancoeurs Mantais - Sports & Santé</h1>
+        
+        <div class="menu-toggle">☰</div>
+        
+        <nav id="menu">
+        
+        <a href="index.html">Accueil</a>
+        <a href="club.html">Le Club</a>
+        <a href="ecole.html">École de pétanque</a>
+        <a href="calendrier.html">Calendrier</a>
+        <a href="resultats.html">Résultats</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+        
         </nav>
-    </div>
-</header>
+        
+    </header>
 
 <main>
 
@@ -166,6 +171,18 @@ document.body.appendChild(overlay);
 });
 
 </script>
+<script>
+
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("#menu");
+    
+    toggle.addEventListener("click", () => {
+    
+    menu.classList.toggle("active");
+    
+    });
+    
+    </script>
 
 </body>
 </html>

@@ -7,10 +7,16 @@
 </head>
 <body>
 
-<header>
-    <img src="images/logopm.png" alt="Logo Pétancoeurs Mantais" class="logo">
-    <h1>Pétancoeurs Mantais - Sports & Santé</h1>
-    <nav>
+    <header>
+
+        <img src="images/logopm.png" alt="Logo Pétancoeurs Mantais" class="logo">
+        
+        <h1>Pétancoeurs Mantais - Sports & Santé</h1>
+        
+        <div class="menu-toggle">☰</div>
+        
+        <nav id="menu">
+        
         <a href="index.html">Accueil</a>
         <a href="club.html">Le Club</a>
         <a href="ecole.html">École de pétanque</a>
@@ -18,8 +24,10 @@
         <a href="resultats.html">Résultats</a>
         <a href="galerie.html">Galerie</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+        
+        </nav>
+        
+        </header>
 
 <section class="contact">
     <h2>Nous contacter</h2>
@@ -50,5 +58,17 @@
     <p>© 2026 Pétancoeurs Mantais - Sports et Santé</p>
 </footer>
 
+<script>
+
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("#menu");
+    
+    toggle.addEventListener("click", () => {
+    
+    menu.classList.toggle("active");
+    
+    });
+    
+    </script>
 </body>
 </html>
