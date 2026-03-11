@@ -2,6 +2,7 @@
 <html lang="fr">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,6 +12,7 @@
 <title>Pétancoeurs Mantais - Accueil</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -21,7 +23,11 @@
 
 <h1>Pétancoeurs Mantais - Sports & Santé</h1>
 
-<div class="menu-toggle">☰</div>
+<div class="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
 
 <nav id="menu">
 
@@ -40,7 +46,9 @@
 <main>
 
 <!-- HERO -->
+
 <section class="hero">
+
 <div class="hero-content">
 
 <h2>Bienvenue au Club Pétancoeurs Mantais</h2>
@@ -53,10 +61,12 @@ alliant sport, bien-être et esprit d’équipe.
 <a href="club.html" class="btn">Découvrir le club</a>
 
 </div>
+
 </section>
 
 
 <!-- PRESENTATION -->
+
 <section class="presentation">
 
 <h2>Qui sommes-nous ?</h2>
@@ -71,6 +81,7 @@ pour tous les âges, dans un cadre sportif, convivial et responsable.
 
 
 <!-- EVENEMENTS -->
+
 <section class="evenements">
 
 <h2>Prochains événements</h2>
@@ -143,6 +154,7 @@ pour tous les âges, dans un cadre sportif, convivial et responsable.
 
 
 <!-- GALERIE -->
+
 <section class="gallery-preview">
 
 <h2>Aperçu de nos activités</h2>
@@ -159,6 +171,7 @@ pour tous les âges, dans un cadre sportif, convivial et responsable.
 
 
 <!-- CALL TO ACTION -->
+
 <section class="cta">
 
 <h2>Rejoignez-nous !</h2>
@@ -184,6 +197,8 @@ de la pétanque dans une ambiance conviviale et sportive.
 
 <script>
 
+/* MENU HAMBURGER */
+
 const toggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector("#menu");
 
@@ -193,8 +208,31 @@ menu.classList.toggle("active");
 
 });
 
+
+/* ANIMATION AU SCROLL */
+
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+
+});
+
+});
+
+sections.forEach(section => {
+
+observer.observe(section);
+
+});
+
 </script>
 
-
 </body>
+
 </html>

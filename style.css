@@ -356,3 +356,56 @@ body{
     }
     
     }
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+    }
+    
+    .hero h2{
+    font-size:2.2em;
+    margin-bottom:15px;
+    }
+    
+    .hero p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:25px;
+    }
+    
+    
+    /* PRESENTATION */
+    
+    .presentation{
+    text-align:center;
+    }
+    
+    
+    /* EVENEMENTS */
+    
+    .table-wrapper{
+    overflow-x:auto;
+    }
+    
+    
+    /* CTA */
+    
+    .cta{
+    text-align:center;
+    padding:40px;
+    }
+    
+    
+    /* ANIMATION */
+    
+    section{
+    opacity:0;
+    transform:translateY(30px);
+    transition:0.6s;
+    }
+    
+    section.show{
+    opacity:1;
+    transform:translateY(0);
+    }
